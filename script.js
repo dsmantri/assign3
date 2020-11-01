@@ -10,13 +10,13 @@ $("document").ready(function(){
                 let opt = document.createElement("option");
                 opt.textContent = data.menu_items[key].name;
                 opt.value = key;
-                document.querySelector('#restaurant').appendChild(opt);
+                document.querySelector('#menu3').appendChild(opt);
             }
         }
 
     });
 
-document.querySelector("#restaurant").addEventListener("change",showdetails);
+document.querySelector("#menu3").addEventListener("change",showdetails);
 
 function showdetails(e){
     let index = e.target.value;
@@ -36,12 +36,12 @@ function showdetails(e){
         if(descrp == ""){
             descrp = "Description not available";
         }
-        document.querySelector("#menuname").textContent = x.name;
-        document.querySelector("#id").textContent = x.id;
-        document.querySelector("#sname").textContent = x.short_name;
-        document.querySelector("#descp").textContent = descrp;
-        document.querySelector("#psmall").textContent = pricesmall;
-        document.querySelector("#plarge").textContent = x.price_large;
+        document.querySelector("#Name").textContent = x.name;
+        document.querySelector("#idee").textContent = x.id;
+        document.querySelector("#shortName").textContent = x.short_name;
+        document.querySelector("#description").textContent = descrp;
+        document.querySelector("#priceSmall").textContent = pricesmall;
+        document.querySelector("#priceLarge").textContent = x.price_large;
         document.getElementById("tabl").style.display = "block";
     }
 
@@ -50,3 +50,4 @@ function showdetails(e){
 
 
 });
+
